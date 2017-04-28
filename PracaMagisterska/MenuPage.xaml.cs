@@ -14,8 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace PracaMagisterska {
-	public sealed partial class BlankPage1 : Page {
-		public BlankPage1() {
+	public sealed partial class MenuPage : Page {
+		public MenuPage() {
 			this.InitializeComponent();
 		}
 	}
