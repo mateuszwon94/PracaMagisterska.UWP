@@ -1,8 +1,8 @@
-﻿<Application
-    x:Class="PracaMagisterska.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:PracaMagisterska"
-    RequestedTheme="Light">
+﻿<Application x:Class="PracaMagisterska.App"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:local="using:PracaMagisterska"
+			 xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+			 RequestedTheme="Light">
 
 </Application>
