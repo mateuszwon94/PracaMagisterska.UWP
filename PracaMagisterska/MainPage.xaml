@@ -9,8 +9,10 @@
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="*" />
-			<ColumnDefinition Width="2*" />
+			<ColumnDefinition Width="*" 
+							  MinWidth="250"/>
+			<ColumnDefinition Width="2*"
+							  MinWidth="500" />
 		</Grid.ColumnDefinitions>
 
 		<Grid Grid.Column="0"
