@@ -4,5 +4,8 @@
 			 xmlns:local="using:PracaMagisterska"
 			 xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
 			 RequestedTheme="Light">
-
+	<Application.Resources>
+		<FontFamily x:Key="ConsolasFont">Assets/Consolas.ttf#Consolas</FontFamily>
+		<FontFamily x:Key="SegoeFont">Segoe MDL2 Assets</FontFamily>
+	</Application.Resources>
 </Application>
