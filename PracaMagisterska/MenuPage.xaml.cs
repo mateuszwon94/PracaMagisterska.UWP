@@ -18,5 +18,20 @@ namespace PracaMagisterska {
 		public MenuPage() {
 			this.InitializeComponent();
 		}
+
+		private void HamburgerButton_OnClick(object sender, RoutedEventArgs e) =>
+			HamburgerSplitView.IsPaneOpen = !HamburgerSplitView.IsPaneOpen;
+
+		private void HamburgerListBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e) {
+			if ( HamburgerSplitView.IsPaneOpen ) HamburgerSplitView.IsPaneOpen = false;
+
+			if ( PlayListBoxItem.IsSelected ) {
+				MainFrame.Navigate(typeof(GamePage));
+			} else if ( SettingsListBoxItem.IsSelected ) {
+				//MainFrame.Navigate(typeof(SettingsPage));
+			} else if ( CreditsListBoxItem.IsSelected ) {
+				MainFrame.Navigate(typeof(CreditsPage));
+			}
+		}
 	}
 }

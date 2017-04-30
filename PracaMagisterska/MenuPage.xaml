@@ -8,42 +8,83 @@
 	  mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-	    <Grid.ColumnDefinitions>
-		    <ColumnDefinition Width="*" />
-		    <ColumnDefinition Width="1.5*" />
-	    </Grid.ColumnDefinitions>
-		<Grid Grid.Column="0"
-			  Margin="50,50,0,50">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-			</Grid.RowDefinitions>
-			<Button Grid.Row="0"
-					Background="Transparent"
-					HorizontalAlignment="Left"
-					VerticalAlignment="Top"
-					Width="200"
-					Height="50">
-				<Grid >
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="Auto" />
-						<ColumnDefinition Width="*" />
-					</Grid.ColumnDefinitions>
-					<SymbolIcon Grid.Column="0"
-								Symbol=" Page2 " 
-								VerticalAlignment="Center"
-								HorizontalAlignment="Left"/>
-					<TextBlock Grid.Column="1"
-							   FontSize="20"
-							   Margin="10,0,0,0">
-						Play
-					</TextBlock>
-				</Grid>
-			</Button>
-		</Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<RelativePanel Grid.Row="0">
+			<Button Name="HamburgerButton"
+					FontFamily="{StaticResource SegoeFont}"
+					FontSize="30"
+					Content="&#xE700;"
+					RelativePanel.AlignLeftWithPanel="True"
+					Click="HamburgerButton_OnClick"
+					Width="55"
+					Height="50"/>
+			<TextBlock FontFamily="{StaticResource ConsolasFont}"
+					   FontSize="30"
+					   Text="C# game"
+					   RelativePanel.AlignHorizontalCenterWithPanel="True" />
+		</RelativePanel>
+		<SplitView Grid.Row="1"
+				   Name="HamburgerSplitView"
+				   DisplayMode="CompactOverlay"
+				   OpenPaneLength="350"
+				   CompactPaneLength="55">
+			<SplitView.Content>
+				<Frame Name="MainFrame" />
+			</SplitView.Content>
+			<SplitView.Pane>
+				<ListBox Name="HamburgerListBox"
+						 SelectionMode="Single"
+						 SelectionChanged="HamburgerListBox_OnSelectionChanged">
+					<ListBoxItem Name="PlayListBoxItem">
+						<RelativePanel>
+							<TextBlock Name="PlayIconTexBlock"
+									   FontFamily="{StaticResource SegoeFont}"
+									   FontSize="30"
+									   Text="&#xE122;"
+									   RelativePanel.AlignLeftWithPanel="True" />
+							<TextBlock FontFamily="{StaticResource ConsolasFont}"
+									   FontSize="25"
+									   Text="Let's code!"
+									   RelativePanel.RightOf="PlayIconTexBlock"
+									   RelativePanel.AlignVerticalCenterWithPanel="True"
+									   Margin="20,0,0,0" />
+						</RelativePanel>
+					</ListBoxItem>
+					<ListBoxItem Name="SettingsListBoxItem">
+						<RelativePanel>
+							<TextBlock Name="SettingsIconTexBlock"
+									   FontFamily="{StaticResource SegoeFont}"
+									   FontSize="30"
+									   Text="&#xE115;"
+									   RelativePanel.AlignLeftWithPanel="True" />
+							<TextBlock FontFamily="{StaticResource ConsolasFont}"
+									   FontSize="25"
+									   Text="Settings"
+									   RelativePanel.RightOf="SettingsIconTexBlock"
+									   RelativePanel.AlignVerticalCenterWithPanel="True"
+									   Margin="20,0,0,0" />
+						</RelativePanel>
+					</ListBoxItem>
+					<ListBoxItem Name="CreditsListBoxItem" IsSelected="True">
+						<RelativePanel>
+							<TextBlock Name="CreditsIconTexBlock"
+									   FontFamily="{StaticResource SegoeFont}"
+									   FontSize="30"
+									   Text="&#xE728;"
+									   RelativePanel.AlignLeftWithPanel="True" />
+							<TextBlock FontFamily="{StaticResource ConsolasFont}"
+									   FontSize="25"
+									   Text="Credits"
+									   RelativePanel.RightOf="CreditsIconTexBlock"
+									   RelativePanel.AlignVerticalCenterWithPanel="True"
+									   Margin="20,0,0,0" />
+						</RelativePanel>
+					</ListBoxItem>
+				</ListBox>
+			</SplitView.Pane>
+		</SplitView>
 	</Grid>
 </Page>
