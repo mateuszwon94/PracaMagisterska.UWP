@@ -33,5 +33,15 @@ namespace PracaMagisterska {
 				MainFrame.Navigate(typeof(CreditsPage));
 			}
 		}
+
+		private void NavigateListBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e) {
+			if ( GoBackBoxItem.IsSelected ) {
+				GoBackBoxItem.IsSelected = false;
+				if (MainFrame.CanGoBack) MainFrame.GoBack();
+			} else if ( GoForwardListBoxItem.IsSelected ) {
+				GoForwardListBoxItem.IsSelected = false;
+				if ( MainFrame.CanGoForward ) MainFrame.GoForward();
+			}
+		}
 	}
 }

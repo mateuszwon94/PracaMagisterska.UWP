@@ -35,55 +35,93 @@
 				<Frame Name="MainFrame" />
 			</SplitView.Content>
 			<SplitView.Pane>
-				<ListBox Name="HamburgerListBox"
-						 SelectionMode="Single"
-						 SelectionChanged="HamburgerListBox_OnSelectionChanged">
-					<ListBoxItem Name="PlayListBoxItem">
-						<RelativePanel>
-							<TextBlock Name="PlayIconTexBlock"
-									   FontFamily="{StaticResource SegoeFont}"
-									   FontSize="30"
-									   Text="&#xE122;"
-									   RelativePanel.AlignLeftWithPanel="True" />
-							<TextBlock FontFamily="{StaticResource ConsolasFont}"
-									   FontSize="25"
-									   Text="Let's code!"
-									   RelativePanel.RightOf="PlayIconTexBlock"
-									   RelativePanel.AlignVerticalCenterWithPanel="True"
-									   Margin="20,0,0,0" />
-						</RelativePanel>
-					</ListBoxItem>
-					<ListBoxItem Name="SettingsListBoxItem">
-						<RelativePanel>
-							<TextBlock Name="SettingsIconTexBlock"
-									   FontFamily="{StaticResource SegoeFont}"
-									   FontSize="30"
-									   Text="&#xE115;"
-									   RelativePanel.AlignLeftWithPanel="True" />
-							<TextBlock FontFamily="{StaticResource ConsolasFont}"
-									   FontSize="25"
-									   Text="Settings"
-									   RelativePanel.RightOf="SettingsIconTexBlock"
-									   RelativePanel.AlignVerticalCenterWithPanel="True"
-									   Margin="20,0,0,0" />
-						</RelativePanel>
-					</ListBoxItem>
-					<ListBoxItem Name="CreditsListBoxItem" IsSelected="True">
-						<RelativePanel>
-							<TextBlock Name="CreditsIconTexBlock"
-									   FontFamily="{StaticResource SegoeFont}"
-									   FontSize="30"
-									   Text="&#xE728;"
-									   RelativePanel.AlignLeftWithPanel="True" />
-							<TextBlock FontFamily="{StaticResource ConsolasFont}"
-									   FontSize="25"
-									   Text="Credits"
-									   RelativePanel.RightOf="CreditsIconTexBlock"
-									   RelativePanel.AlignVerticalCenterWithPanel="True"
-									   Margin="20,0,0,0" />
-						</RelativePanel>
-					</ListBoxItem>
-				</ListBox>
+				<StackPanel Orientation="Vertical">
+					<ListBox Name="HamburgerListBox"
+							 SelectionMode="Single"
+							 SelectionChanged="HamburgerListBox_OnSelectionChanged">
+						<ListBoxItem Name="PlayListBoxItem">
+							<RelativePanel>
+								<TextBlock Name="PlayIconTextBlock"
+										   FontFamily="{StaticResource SegoeFont}"
+										   FontSize="30"
+										   Text="&#xE122;"
+										   RelativePanel.AlignLeftWithPanel="True" />
+								<TextBlock FontFamily="{StaticResource ConsolasFont}"
+										   FontSize="25"
+										   Text="Let's code!"
+										   RelativePanel.RightOf="PlayIconTextBlock"
+										   RelativePanel.AlignVerticalCenterWithPanel="True"
+										   Margin="20,0,0,0" />
+							</RelativePanel>
+						</ListBoxItem>
+						<ListBoxItem Name="SettingsListBoxItem">
+							<RelativePanel>
+								<TextBlock Name="SettingsIconTextBlock"
+										   FontFamily="{StaticResource SegoeFont}"
+										   FontSize="30"
+										   Text="&#xE115;"
+										   RelativePanel.AlignLeftWithPanel="True" />
+								<TextBlock FontFamily="{StaticResource ConsolasFont}"
+										   FontSize="25"
+										   Text="Settings"
+										   RelativePanel.RightOf="SettingsIconTextBlock"
+										   RelativePanel.AlignVerticalCenterWithPanel="True"
+										   Margin="20,0,0,0" />
+							</RelativePanel>
+						</ListBoxItem>
+						<ListBoxItem Name="CreditsListBoxItem"
+									 IsSelected="True">
+							<RelativePanel>
+								<TextBlock Name="CreditsIconTextBlock"
+										   FontFamily="{StaticResource SegoeFont}"
+										   FontSize="30"
+										   Text="&#xE728;"
+										   RelativePanel.AlignLeftWithPanel="True" />
+								<TextBlock FontFamily="{StaticResource ConsolasFont}"
+										   FontSize="25"
+										   Text="Credits"
+										   RelativePanel.RightOf="CreditsIconTextBlock"
+										   RelativePanel.AlignVerticalCenterWithPanel="True"
+										   Margin="20,0,0,0" />
+							</RelativePanel>
+						</ListBoxItem>
+					</ListBox>
+					<MenuFlyoutSeparator Margin="0,10,0,10" />
+					<ListBox Name="NavigateListBox"
+							 SelectionMode="Single"
+							 SelectionChanged="NavigateListBox_OnSelectionChanged">
+						<ListBoxItem Name="GoBackBoxItem">
+							<RelativePanel>
+								<TextBlock Name="GoBackIconTextBlock"
+										   FontFamily="{StaticResource SegoeFont}"
+										   FontSize="30"
+										   Text="&#xE0A6;"
+										   RelativePanel.AlignLeftWithPanel="True" />
+								<TextBlock FontFamily="{StaticResource ConsolasFont}"
+										   FontSize="25"
+										   Text="Go back"
+										   RelativePanel.RightOf="GoBackIconTextBlock"
+										   RelativePanel.AlignVerticalCenterWithPanel="True"
+										   Margin="20,0,0,0" />
+							</RelativePanel>
+						</ListBoxItem>
+						<ListBoxItem Name="GoForwardListBoxItem">
+							<RelativePanel>
+								<TextBlock Name="GoForwardIconTexBlock"
+										   FontFamily="{StaticResource SegoeFont}"
+										   FontSize="30"
+										   Text="&#xE0AB;"
+										   RelativePanel.AlignLeftWithPanel="True" />
+								<TextBlock FontFamily="{StaticResource ConsolasFont}"
+										   FontSize="25"
+										   Text="Go Forward"
+										   RelativePanel.RightOf="GoForwardIconTexBlock"
+										   RelativePanel.AlignVerticalCenterWithPanel="True"
+										   Margin="20,0,0,0" />
+							</RelativePanel>
+						</ListBoxItem>
+					</ListBox>
+				</StackPanel>
 			</SplitView.Pane>
 		</SplitView>
 	</Grid>
