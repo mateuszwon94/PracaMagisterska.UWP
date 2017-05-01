@@ -44,7 +44,7 @@
 								<TextBlock Name="PlayIconTextBlock"
 										   FontFamily="{StaticResource SegoeFont}"
 										   FontSize="30"
-										   Text="&#xE122;"
+										   Text="&#xEDB5;"
 										   RelativePanel.AlignLeftWithPanel="True" />
 								<TextBlock FontFamily="{StaticResource ConsolasFont}"
 										   FontSize="25"
@@ -116,6 +116,44 @@
 										   FontSize="25"
 										   Text="Go Forward"
 										   RelativePanel.RightOf="GoForwardIconTexBlock"
+										   RelativePanel.AlignVerticalCenterWithPanel="True"
+										   Margin="20,0,0,0" />
+							</RelativePanel>
+						</ListBoxItem>
+					</ListBox>
+					<MenuFlyoutSeparator Name="GameSeparator"
+										 Margin="0,10,0,10"
+										 Visibility="Collapsed" />
+					<ListBox Name="GameListBox"
+							 SelectionMode="Single"
+							 SelectionChanged="GameListBox_OnSelectionChanged"
+							 Visibility="Collapsed">
+						<ListBoxItem Name="CompileBoxItem">
+							<RelativePanel>
+								<TextBlock Name="CompilekIconTextBlock"
+										   FontFamily="{StaticResource SegoeFont}"
+										   FontSize="30"
+										   Text="&#xE895;"
+										   RelativePanel.AlignLeftWithPanel="True" />
+								<TextBlock FontFamily="{StaticResource ConsolasFont}"
+										   FontSize="25"
+										   Text="Compile"
+										   RelativePanel.RightOf="CompilekIconTextBlock"
+										   RelativePanel.AlignVerticalCenterWithPanel="True"
+										   Margin="20,0,0,0" />
+							</RelativePanel>
+						</ListBoxItem>
+						<ListBoxItem Name="RunListBoxItem">
+							<RelativePanel>
+								<TextBlock Name="RunIconTexBlock"
+										   FontFamily="{StaticResource SegoeFont}"
+										   FontSize="30"
+										   Text="&#xE122;"
+										   RelativePanel.AlignLeftWithPanel="True" />
+								<TextBlock FontFamily="{StaticResource ConsolasFont}"
+										   FontSize="25"
+										   Text="Run program"
+										   RelativePanel.RightOf="RunIconTexBlock"
 										   RelativePanel.AlignVerticalCenterWithPanel="True"
 										   Margin="20,0,0,0" />
 							</RelativePanel>

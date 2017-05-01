@@ -21,5 +21,9 @@ namespace PracaMagisterska {
 		public GamePage() {
 			this.InitializeComponent();
 		}
+
+		public void Compile() {
+			
+		}
 	}
 }
