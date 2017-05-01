@@ -32,7 +32,7 @@
 				   OpenPaneLength="350"
 				   CompactPaneLength="55">
 			<SplitView.Content>
-				<Frame Name="MainFrame" />
+				<Frame Name="MainFrame" Navigated="MainFrame_OnNavigated" />
 			</SplitView.Content>
 			<SplitView.Pane>
 				<StackPanel Orientation="Vertical">

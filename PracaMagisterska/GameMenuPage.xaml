@@ -1,0 +1,78 @@
+﻿<Page x:Class="PracaMagisterska.GameMenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PracaMagisterska"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+	<!-- unchecked &#xE739;  checked &#xE73A; -->
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<RelativePanel Grid.Row="0"
+				   Grid.Column="1">
+			<TextBlock RelativePanel.AlignRightWithPanel="True"
+					   Text="N°"
+					   Margin="10,0,0,0"
+					   FontFamily="{StaticResource ConsolasFont}"
+					   FontSize="20" />
+		</RelativePanel>
+		<RelativePanel Grid.Row="0"
+					   Grid.Column="2">
+			<TextBlock RelativePanel.AlignLeftWithPanel="True"
+					   Text="Nazwa lekcji"
+					   Margin="10,0,0,0"
+					   FontFamily="{StaticResource ConsolasFont}"
+					   FontSize="20" />
+		</RelativePanel>
+	    <RelativePanel Grid.Row="0"
+					   Grid.Column="3">
+		    <TextBlock RelativePanel.AlignLeftWithPanel="True"
+					   Text="Trudność"
+					   Margin="10,0,0,0"
+					   FontFamily="{StaticResource ConsolasFont}"
+					   FontSize="20" />
+	    </RelativePanel>
+		<RelativePanel Grid.Row="1"
+					   Grid.Column="0">
+			<TextBlock RelativePanel.AlignRightWithPanel="True"
+					   Text="&#xE739;"
+					   Margin="10,0,0,0"
+					   FontFamily="{StaticResource SegoeFont}"
+					   FontSize="20" />
+		</RelativePanel>
+		<RelativePanel Grid.Row="1"
+					   Grid.Column="1">
+			<TextBlock RelativePanel.AlignRightWithPanel="True"
+					   Text="1."
+					   Margin="10,0,0,0"
+					   FontFamily="{StaticResource ConsolasFont}"
+					   FontSize="20" />
+		</RelativePanel>
+		<RelativePanel Grid.Row="1"
+					   Grid.Column="2">
+		    <TextBlock RelativePanel.AlignLeftWithPanel="True"
+					   Text="Witaj świecie!"
+					   Margin="10,0,0,0"
+					   FontFamily="{StaticResource ConsolasFont}"
+					   FontSize="20" />
+		</RelativePanel>
+	    <RelativePanel Grid.Row="1"
+					   Grid.Column="3">
+		    <TextBlock RelativePanel.AlignLeftWithPanel="True"
+					   Text="&#xF0E5; &#xE24A; &#xE24A; &#xE24A; &#xE24A;"
+					   Margin="10,0,0,0"
+					   FontFamily="{StaticResource SegoeFont}"
+					   FontSize="20" />
+	    </RelativePanel>
+	</Grid>
+</Page>

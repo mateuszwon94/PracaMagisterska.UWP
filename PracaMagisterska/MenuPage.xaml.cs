@@ -25,18 +25,8 @@ namespace PracaMagisterska {
 		private void HamburgerListBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e) {
 			if ( HamburgerSplitView.IsPaneOpen ) HamburgerSplitView.IsPaneOpen = false;
 
-
-			if ( GameSeparator != null ) {
-				GameSeparator.Visibility = Visibility.Collapsed;
-			}
-			if ( GameListBox != null ) {
-				GameListBox.Visibility = Visibility.Collapsed;
-			}
-
 			if ( PlayListBoxItem.IsSelected ) {
-				MainFrame.Navigate(typeof(GamePage));
-				GameSeparator.Visibility = Visibility.Visible;
-				GameListBox.Visibility = Visibility.Visible;
+				MainFrame.Navigate(typeof(GameMenuPage));
 			} else if ( SettingsListBoxItem.IsSelected ) {
 				//MainFrame.Navigate(typeof(SettingsPage));
 			} else if ( CreditsListBoxItem.IsSelected ) {
@@ -58,11 +48,21 @@ namespace PracaMagisterska {
 			if ( MainFrame.Content is GamePage gamePage ) {
 				if ( CompileBoxItem.IsSelected ) {
 					CompileBoxItem.IsSelected = false;
-					
 				} else if ( RunListBoxItem.IsSelected ) {
 					RunListBoxItem.IsSelected = false;
 
 				}
+			}
+		}
+
+		private void MainFrame_OnNavigated(object sender, NavigationEventArgs e) {
+			if ( GameSeparator != null ) GameSeparator.Visibility = Visibility.Collapsed;
+			if ( GameListBox != null )   GameListBox.Visibility = Visibility.Collapsed;
+
+
+			if ( e.Content is GamePage ) {
+				GameSeparator.Visibility = Visibility.Visible;
+				GameListBox.Visibility = Visibility.Visible;
 			}
 		}
 	}
