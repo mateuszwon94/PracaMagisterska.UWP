@@ -34,23 +34,12 @@ namespace PracaMagisterska {
 			}
 		}
 
-		private void NavigateListBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e) {
-			if ( GoBackBoxItem.IsSelected ) {
-				GoBackBoxItem.IsSelected = false;
-				if (MainFrame.CanGoBack) MainFrame.GoBack();
-			} else if ( GoForwardListBoxItem.IsSelected ) {
-				GoForwardListBoxItem.IsSelected = false;
-				if ( MainFrame.CanGoForward ) MainFrame.GoForward();
-			}
-		}
-
 		private void GameListBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e) {
 			if ( MainFrame.Content is GamePage gamePage ) {
 				if ( CompileBoxItem.IsSelected ) {
 					CompileBoxItem.IsSelected = false;
 				} else if ( RunListBoxItem.IsSelected ) {
 					RunListBoxItem.IsSelected = false;
-
 				}
 			}
 		}
