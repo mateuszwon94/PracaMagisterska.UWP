@@ -98,6 +98,7 @@
     <Compile Include="CreditsPage.xaml.cs">
       <DependentUpon>CreditsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EventArgs\NavigatedToSourceCodePageEventArgs.cs" />
     <Compile Include="GameMenuPage.xaml.cs">
       <DependentUpon>GameMenuPage.xaml</DependentUpon>
     </Compile>

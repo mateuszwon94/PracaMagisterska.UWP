@@ -12,11 +12,19 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using PracaMagisterska.EventArgs;
 
 namespace PracaMagisterska {
 	public sealed partial class GameMenuPage : Page {
 		public GameMenuPage() {
 			this.InitializeComponent();
 		}
+
+		private void Lesson1Button_OnClick(object sender, RoutedEventArgs e) {
+			Frame.Navigate(typeof(GamePage));
+			NavigatedToSourceCodePage?.Invoke(this, new NavigatedToSourceCodePageEventArgs(1));
+		}
+
+		public event EventHandler<NavigatedToSourceCodePageEventArgs> NavigatedToSourceCodePage;
 	}
 }

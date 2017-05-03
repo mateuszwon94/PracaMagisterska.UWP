@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using PracaMagisterska.EventArgs;
 
 namespace PracaMagisterska {
 	public sealed partial class MenuPage : Page {
@@ -27,11 +28,17 @@ namespace PracaMagisterska {
 
 			if ( PlayListBoxItem.IsSelected ) {
 				MainFrame.Navigate(typeof(GameMenuPage));
+				if ( MainFrame.Content is GameMenuPage gameMenuPage )
+					gameMenuPage.NavigatedToSourceCodePage += GameMenuPageOnNavigatedToSourceCodePage;
 			} else if ( SettingsListBoxItem.IsSelected ) {
 				//MainFrame.Navigate(typeof(SettingsPage));
 			} else if ( CreditsListBoxItem.IsSelected ) {
 				MainFrame.Navigate(typeof(CreditsPage));
 			}
+		}
+
+		private void GameMenuPageOnNavigatedToSourceCodePage(object sender, NavigatedToSourceCodePageEventArgs e) {
+			PlayListBoxItem.IsSelected = false;
 		}
 
 		private void GameListBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e) {
