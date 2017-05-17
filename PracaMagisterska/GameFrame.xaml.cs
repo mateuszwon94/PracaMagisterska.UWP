@@ -22,6 +22,10 @@ namespace PracaMagisterska {
 			this.InitializeComponent();
 		}
 
+		protected override void OnNavigatedFrom(NavigationEventArgs e) {
+			SourceCodeTexBox.PlaceholderText = "Lekcja " + (int?)e?.Parameter + ".";
+		}
+
 		public void Compile() {
 			
 		}

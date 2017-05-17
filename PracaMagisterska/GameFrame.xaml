@@ -27,6 +27,7 @@
 					 Name="SourceCodeTexBox"
 					 VerticalAlignment="Stretch"
 					 FontSize="12"
-					 FontFamily="{StaticResource ConsolasFont}" />
+					 FontFamily="{StaticResource ConsolasFont}"
+					 PlaceholderText="Lekcja n." />
 	</Grid>
 </Page>

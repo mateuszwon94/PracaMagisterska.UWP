@@ -20,9 +20,20 @@ namespace PracaMagisterska {
 			this.InitializeComponent();
 		}
 
-		private void Lesson1Button_OnClick(object sender, RoutedEventArgs e) {
-			Frame.Navigate(typeof(GamePage));
-			NavigatedToSourceCodePage?.Invoke(this, new NavigatedToSourceCodePageEventArgs(1));
+		private void LessonButton_OnClick(object sender, RoutedEventArgs e) {
+			if ( sender is Button button ) {
+				int lessonNumber = -1;
+				switch ( button.Name ) {
+					case "Lesson1Button":
+						lessonNumber = 1;
+						break;
+					case "Lesson2Button":
+						lessonNumber = 2;
+						break;
+				}
+				Frame.Navigate(typeof(GamePage), lessonNumber);
+				NavigatedToSourceCodePage?.Invoke(this, new NavigatedToSourceCodePageEventArgs(lessonNumber));
+			}
 		}
 
 		public event EventHandler<NavigatedToSourceCodePageEventArgs> NavigatedToSourceCodePage;
