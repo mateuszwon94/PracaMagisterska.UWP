@@ -21,7 +21,7 @@ namespace PracaMagisterska {
 	/// </summary>
 	public sealed partial class CreditsPage : Page {
 		public CreditsPage() {
-			this.InitializeComponent();
+			InitializeComponent();
 		}
 	}
 }

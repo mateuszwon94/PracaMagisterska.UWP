@@ -17,7 +17,7 @@ using PracaMagisterska.EventArgs;
 namespace PracaMagisterska {
 	public sealed partial class MenuPage : Page {
 		public MenuPage() {
-			this.InitializeComponent();
+			InitializeComponent();
 		}
 
 		private void HamburgerButton_OnClick(object sender, RoutedEventArgs e) =>

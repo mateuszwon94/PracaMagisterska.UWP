@@ -12,6 +12,7 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 		<TextBlock Grid.Row="0"
 				   HorizontalAlignment="Left"
@@ -26,8 +27,16 @@
 					 HorizontalAlignment="Stretch"
 					 Name="SourceCodeTexBox"
 					 VerticalAlignment="Stretch"
-					 FontSize="12"
+					 FontSize="16"
 					 FontFamily="{StaticResource ConsolasFont}"
-					 PlaceholderText="Lekcja n." />
+					 PlaceholderText="Lekcja n." 
+					 TextChanged="SourceCodeTexBox_OnTextChanged" />
+		<TextBlock Grid.Row="2"
+		             HorizontalAlignment="Stretch"
+		             Name="SourceCodeTexBlock"
+		             VerticalAlignment="Stretch"
+		             FontSize="14"
+		             FontFamily="{StaticResource ConsolasFont}"
+				     IsTextSelectionEnabled="True"/>
 	</Grid>
 </Page>

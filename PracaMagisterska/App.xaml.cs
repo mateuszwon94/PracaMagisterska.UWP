@@ -25,8 +25,8 @@ namespace PracaMagisterska {
 		/// wykonywanego i jest logicznym odpowiednikiem metod main() lub WinMain().
 		/// </summary>
 		public App() {
-			this.InitializeComponent();
-			this.Suspending += OnSuspending;
+			InitializeComponent();
+			Suspending += OnSuspending;
 		}
 
 		/// <summary>
