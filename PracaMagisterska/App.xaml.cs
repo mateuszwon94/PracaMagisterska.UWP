@@ -25,8 +25,8 @@ namespace PracaMagisterska {
 		/// wykonywanego i jest logicznym odpowiednikiem metod main() lub WinMain().
 		/// </summary>
 		public App() {
-			this.InitializeComponent();
-			this.Suspending += OnSuspending;
+			InitializeComponent();
+			Suspending += OnSuspending;
 		}
 
 		/// <summary>
@@ -70,9 +70,8 @@ namespace PracaMagisterska {
 		/// </summary>
 		/// <param name="sender">Ramka, do której nawigacja nie powiodła się</param>
 		/// <param name="e">Szczegóły dotyczące niepowodzenia nawigacji</param>
-		void OnNavigationFailed(object sender, NavigationFailedEventArgs e) {
-			throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
-		}
+		void OnNavigationFailed(object sender, NavigationFailedEventArgs e) 
+			=> throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
 
 		/// <summary>
 		/// Wywoływane, gdy wykonanie aplikacji jest wstrzymywane. Stan aplikacji jest zapisywany

@@ -19,7 +19,7 @@ namespace PracaMagisterska {
 
 	public sealed partial class GamePage : Page {
 		public GamePage() {
-			this.InitializeComponent();
+			InitializeComponent();
 		}
 
 		protected override void OnNavigatedFrom(NavigationEventArgs e) {
