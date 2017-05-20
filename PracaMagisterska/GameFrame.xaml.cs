@@ -23,7 +23,7 @@ namespace PracaMagisterska {
 		}
 
 		protected override void OnNavigatedFrom(NavigationEventArgs e) {
-			SourceCodeTexBox.PlaceholderText = "Lekcja " + (int?)e?.Parameter + ".";
+			SourceCodeTextBox.PlaceholderText = "Lekcja " + (int?)e?.Parameter + ".";
 		}
 
 		public void Compile() {

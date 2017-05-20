@@ -24,7 +24,7 @@
 				   FontFamily="{StaticResource ConsolasFont}" />
 		<RichEditBox Grid.Row="1"
 					 HorizontalAlignment="Stretch"
-					 Name="SourceCodeTexBox"
+					 Name="SourceCodeTextBox"
 					 VerticalAlignment="Stretch"
 					 FontSize="12"
 					 FontFamily="{StaticResource ConsolasFont}"
